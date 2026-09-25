@@ -33,21 +33,20 @@
 </nav>
 
 <header class="hero"><div class="container">
-  <h1>How to Make Mobile Canvas Games Feel Fast</h1>
-  <p>An actionable checklist for silky 60 FPS on mid‑range phones.</p>
+  <h1>How to make mobile canvas games feel fast</h1>
+  <p>A practical checklist for creating a smoother, snappier experience on phones.</p>
 </div></header>
 <section class="section container">
   <article class="card">
-    <div class="meta">Published 2025-08-22</div>
-    <div>Mobile browsers are powerful, but you only get ~16ms per frame at 60 FPS—and part of that belongs to the browser. Here’s a practical checklist:
+    <div class="meta">Published 2026-06-24</div>
+    <div>Mobile browsers can feel very capable, but the frame budget is still limited. A few careful choices can make the difference between something that feels sluggish and something that feels polished:
 <ul>
-<li><b>Batch your drawing.</b> Reduce state changes; avoid unnecessary gradients or shadows each frame.</li>
-<li><b>Prefer integer math.</b> Sub‑pixel rendering looks nice but can be expensive; snap to whole pixels when possible.</li>
-<li><b>Use one event stream.</b> Pointer events unify touch/mouse; mark listeners as <code>passive</code> to avoid main‑thread jank.</li>
-<li><b>Cap work per tick.</b> Keep your game loop under 12ms; move non‑critical work outside the loop.</li>
-<li><b>Profile often.</b> Chrome’s Performance panel reveals long tasks, layout trashing, and expensive styles.</li>
+<li><b>Batch your drawing.</b> Reduce unnecessary state changes and avoid expensive effects at every frame.</li>
+<li><b>Keep the loop lean.</b> Move non-critical work outside the main update cycle so motion stays steady.</li>
+<li><b>Use one event stream.</b> Pointer events make touch and mouse input feel more consistent.</li>
+<li><b>Profile often.</b> Check the performance panel regularly so you can target the actual bottlenecks.</li>
 </ul>
-If you do just one thing: measure. Guessing is the fastest way to slow code.</div>
+The most effective optimizations usually come from measuring the experience rather than guessing at what feels slow.</div>
     <div style="height:12px"></div>
     <a class="btn ghost" href="../blog.html">← Back to Blog</a>
   </article>
